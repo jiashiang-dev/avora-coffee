@@ -13,7 +13,7 @@ function getScrollDistance() {
   return window.innerHeight * 4;
 }
 
-export function CinematicPour() {
+export function CinematicPour({ videoSrc }: { videoSrc: string }) {
   const sectionRef = useRef<HTMLElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const introRef = useRef<HTMLDivElement>(null);
@@ -141,7 +141,7 @@ export function CinematicPour() {
       <video
         ref={videoRef}
         className="cinematic__video"
-        src="/avora-coffee-scrub.mp4"
+        src={videoSrc}
         preload="auto"
         muted
         playsInline

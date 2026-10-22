@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { Hero } from './hero';
 import { MotionController } from './motion';
+import { publicAsset } from './asset-path';
 
 const drinks = [
   {
@@ -8,7 +9,7 @@ const drinks = [
     name: 'AVORA LATTE',
     detail: 'Espresso / Milk / Silky Finish',
     className: 'drink--avora',
-    image: '/assets/signature-coffee/avora-latte.webp',
+    image: publicAsset('/assets/signature-coffee/avora-latte.webp'),
     imageWidth: 1344,
     imageHeight: 752,
     sizes: '(max-width: 760px) calc(100vw - 5rem), 55vw',
@@ -18,7 +19,7 @@ const drinks = [
     name: 'AMBER CLOUD',
     detail: 'Espresso / Cream / Caramel',
     className: 'drink--amber',
-    image: '/assets/signature-coffee/amber-cloud.webp',
+    image: publicAsset('/assets/signature-coffee/amber-cloud.webp'),
     imageWidth: 1344,
     imageHeight: 752,
     sizes: '(max-width: 760px) calc(100vw - 5rem), 39vw',
@@ -28,7 +29,7 @@ const drinks = [
     name: 'DARK VELVET',
     detail: 'Double Espresso / Cocoa / Milk',
     className: 'drink--velvet',
-    image: '/assets/signature-coffee/dark-velvet.webp',
+    image: publicAsset('/assets/signature-coffee/dark-velvet.webp'),
     imageWidth: 1024,
     imageHeight: 688,
     sizes: '(max-width: 760px) calc(100vw - 5rem), 39vw',
@@ -76,7 +77,7 @@ export default function Home() {
         <div className="panel story__panel reveal" data-reveal>
           <div className="story__visual">
             <Image
-              src="/assets/craft/craft-portafilter-preparation.webp"
+              src={publicAsset('/assets/craft/craft-portafilter-preparation.webp')}
               alt="A close view of espresso preparation at AVORA"
               width={880}
               height={1168}
@@ -163,7 +164,7 @@ export default function Home() {
           </h2>
           <div className="craft__visual">
             <Image
-              src="/assets/craft/craft-espresso-extraction.webp"
+              src={publicAsset('/assets/craft/craft-espresso-extraction.webp')}
               alt="Espresso extracting from a polished coffee machine"
               width={880}
               height={1168}
@@ -205,7 +206,7 @@ export default function Home() {
           <div className="collage" aria-label="AVORA atmosphere gallery">
             <div className="collage__item collage__item--main reveal" data-reveal>
               <Image
-                src="/assets/experience/experience-cafe-lounge.webp"
+                src={publicAsset('/assets/experience/experience-cafe-lounge.webp')}
                 alt="Warm AVORA café lounge and coffee bar"
                 width={880}
                 height={1168}
@@ -218,7 +219,7 @@ export default function Home() {
             </div>
             <div className="collage__item collage__item--detail reveal" data-reveal>
               <Image
-                src="/assets/craft/craft-latte-art-pour.webp"
+                src={publicAsset('/assets/craft/craft-latte-art-pour.webp')}
                 alt="Barista pouring latte art by hand"
                 width={1168}
                 height={880}
@@ -231,7 +232,7 @@ export default function Home() {
             </div>
             <div className="collage__item collage__item--people reveal" data-reveal>
               <Image
-                src="/assets/experience/experience-coffee-conversation.webp"
+                src={publicAsset('/assets/experience/experience-coffee-conversation.webp')}
                 alt="Guests sharing coffee around a table"
                 width={1024}
                 height={1024}
@@ -244,7 +245,7 @@ export default function Home() {
             </div>
             <div className="collage__item collage__item--atmosphere reveal" data-reveal>
               <Image
-                src="/assets/experience/experience-sunlit-coffee-bar.webp"
+                src={publicAsset('/assets/experience/experience-sunlit-coffee-bar.webp')}
                 alt="Sunlight crossing AVORA's quiet coffee bar"
                 width={880}
                 height={1168}
@@ -311,7 +312,7 @@ export default function Home() {
           </div>
           <div className="visit__visual">
             <Image
-              src="/assets/visit/visit-avora-tall-facade-entry.webp"
+              src={publicAsset('/assets/visit/visit-avora-tall-facade-entry.webp')}
               alt="AVORA's warmly lit exterior entrance"
               width={880}
               height={1168}
